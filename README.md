@@ -1,3 +1,3 @@
-# nwpc-ecflow-python
+# nwpc-ecflow-docker
 
-A docker image for ecflow python API using with python 3.
+Docker images for ecFlow.
