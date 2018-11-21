@@ -11,11 +11,12 @@ RUN apt update \
     && apt install -y cmake \
     && rm -rf /var/lib/apt/lists/*
 
+COPY docker/base/get_code.sh /tmp/get_code.sh
 COPY dist/ecflow_code /tmp/ecflow_code
 
 RUN set -ex \
     && cd /tmp \
-    && cp ecflow_code/* . \
+    && sh ./get_code.sh \
     && tar zxf boost_${BOOST_VERSION}.tar.gz \
     && tar zxf ecFlow-${ECFLOW_VERSION}-Source.tar.gz \
     \
@@ -30,5 +31,6 @@ RUN set -ex \
     && sed "s|using python.*|using python : ${python_version} : : ${python_include_path} ;|" \
         project-config.jam.orig > project-config.jam \
     && ${WK}/build_scripts/boost_build.sh
+
 
 CMD ["python"]
