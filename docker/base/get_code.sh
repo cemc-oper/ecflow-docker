@@ -3,9 +3,10 @@ set -ex
 cd /tmp
 boost_file_name=boost_${BOOST_VERSION}.tar.gz
 
-cd /tmp
-test -d ecflow_code || mkdir ecflow_code
-cd ecflow_code
+cd /tmp/ecflow-docker
+test -d dist/ecflow_code || mkdir -p dist/ecflow_code
+cd dist/ecflow_code
+
 
 if [ ! -f ${boost_file_name} ]; then
     boost_version_dot=$(echo ${BOOST_VERSION} | sed "s/_/\./g")

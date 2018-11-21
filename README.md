@@ -4,6 +4,12 @@ A docker image for ecFlow python API with python 3.
 
 ## Build
 
+### Prepare
+
+ecflow-docker needs boost and ecflow source code. 
+The Base dockerfile will download them during build stage.
+If you don't want to download files every time, you can put them under ./dist/ecflow_code directory.
+
 ### Base
 
 ```bash
