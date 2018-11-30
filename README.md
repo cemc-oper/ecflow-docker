@@ -13,25 +13,31 @@ If you don't want to download files every time, you can put them under ./dist/ec
 ### Base
 
 ```bash
-docker build --rm --tag nwpc/ecflow:base -f docker/base/Dockerfile .
+docker build --rm --tag nwpcc/ecflow:base -f docker/base/Dockerfile .
 ```
 
 ### Python
 
 ```bash
-docker build --rm --tag nwpc/ecflow:python -f docker/python/Dockerfile .
+docker build --rm --tag nwpcc/ecflow:python -f docker/python/Dockerfile .
 ```
 
 ### Server
 
 ```bash
-docker build --rm --tag nwpc/ecflow:server -f docker/server/Dockerfile .
+docker build --rm --tag nwpcc/ecflow:server -f docker/server/Dockerfile .
 ```
 
 ## Run ecFlow Server
 
-Use image `nwpc/ecflow:server` to run ecFlow server.
+Use image `nwpcc/ecflow:server` to run ecFlow server.
 
 ```bash
-docker run -d -p <some port>:3141 --name my-ecflow-server nwpc/ecflow:server
+docker run -d -p <some port>:3141 --name my-ecflow-server nwpcc/ecflow:server
 ```
+
+## LICENSE
+
+Copyright &copy; 2018, Perilla Roc.
+
+`ecflow-docker` is licensed under [MIT](LICENSE.md)
