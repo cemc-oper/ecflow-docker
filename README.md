@@ -38,6 +38,6 @@ docker run -d -p <some port>:3141 --name my-ecflow-server nwpcc/ecflow:server
 
 ## LICENSE
 
-Copyright &copy; 2018, Perilla Roc.
+Copyright &copy; 2018-2019, Perilla Roc.
 
 `ecflow-docker` is licensed under [MIT](LICENSE.md)
