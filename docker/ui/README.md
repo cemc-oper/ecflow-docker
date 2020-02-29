@@ -1,0 +1,1 @@
+apt install qt5-default libqt5svg5-dev libqt5charts5-dev
