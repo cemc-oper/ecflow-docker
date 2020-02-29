@@ -4,14 +4,15 @@ LABEL maintainer="perillaroc@gmail.com"
 
 ARG BOOST_VERSION=1_53_0
 ENV BOOST_VERSION ${BOOST_VERSION}
-ARG ECFLOW_VERSION=4.10.0
+ARG ECFLOW_VERSION=4.17.1
 ENV ECFLOW_VERSION ${ECFLOW_VERSION}
 
-RUN apt update \
+COPY . /tmp/ecflow-docker
+
+RUN cp /tmp/ecflow-docker/docker/base/sources.list /etc/apt/sources.list \
+    && apt update \
     && apt install -y cmake \
     && rm -rf /var/lib/apt/lists/*
-
-COPY . /tmp/ecflow-docker
 
 RUN set -ex \
     && cd /tmp/ecflow-docker \
