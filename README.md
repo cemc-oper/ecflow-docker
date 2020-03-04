@@ -13,25 +13,25 @@ If you don't want to download files every time, you can put them under ./dist/ec
 ### Base
 
 ```bash
-docker build --rm --tag nwpc-oper/ecflow-base -f docker/base/Dockerfile .
+docker build --rm --tag nwpc-oper/ecflow-base -f docker/4/base/Dockerfile .
 ```
 
 ### Python
 
 ```bash
-docker build --rm --tag nwpc-oper/ecflow-python -f docker/python/Dockerfile .
+docker build --rm --tag nwpc-oper/ecflow-python -f docker/4/python/Dockerfile .
 ```
 
 ### Server
 
 ```bash
-docker build --rm --tag nwpc-oper/ecflow-server -f docker/server/Dockerfile .
+docker build --rm --tag nwpc-oper/ecflow-server -f docker/4/server/Dockerfile .
 ```
 
 ### ecflow_ui
 
 ```bash
-docker build --rm --tag nwpc-oper/ecflow-ui -f docker/ui/Dockerfile .
+docker build --rm --tag nwpc-oper/ecflow-ui -f docker/4/ui/Dockerfile .
 ```
 
 ## Run ecFlow Server

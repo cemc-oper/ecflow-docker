@@ -9,7 +9,7 @@ ENV ECFLOW_VERSION ${ECFLOW_VERSION}
 
 COPY . /tmp/ecflow-docker
 
-RUN cp /tmp/ecflow-docker/docker/base/sources.list /etc/apt/sources.list \
+RUN cp /tmp/ecflow-docker/docker/4/base/sources.list /etc/apt/sources.list \
     && apt update \
     && apt install -y cmake \
     && rm -rf /var/lib/apt/lists/*
@@ -17,7 +17,7 @@ RUN cp /tmp/ecflow-docker/docker/base/sources.list /etc/apt/sources.list \
 RUN set -ex \
     && cd /tmp/ecflow-docker \
     && ls -l \
-    && sh ./docker/base/get_code.sh \
+    && sh ./docker/4/base/get_code.sh \
     && cd /tmp \
     && tar zxf boost_${BOOST_VERSION}.tar.gz \
     && tar zxf ecFlow-${ECFLOW_VERSION}-Source.tar.gz \

@@ -23,7 +23,7 @@ VOLUME /srv/ecflow_server
 
 EXPOSE 3141
 
-COPY docker/server/docker_entrypoint.sh /srv/docker_entrypoint.sh
+COPY docker/4/server/docker_entrypoint.sh /srv/docker_entrypoint.sh
 
 RUN set -ex \
     && chmod u+x /srv/docker_entrypoint.sh

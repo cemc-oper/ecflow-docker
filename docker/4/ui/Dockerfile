@@ -27,7 +27,7 @@ RUN set -ex \
 WORKDIR /srv
 VOLUME /srv
 
-COPY docker/ui/docker_entrypoint.sh /srv/docker_entrypoint.sh
+COPY docker/4/ui/docker_entrypoint.sh /srv/docker_entrypoint.sh
 
 RUN set -ex \
     && chmod u+x /srv/docker_entrypoint.sh
